@@ -7,8 +7,9 @@
 ## Architecture
 ```
 train.py   ViT (google/vit-base-patch16-224) fine-tuned on PlantVillage, 80/20 train/validation split,
-           reports validation accuracy, saves cropscan.pt
-advise.py  photo -> GPT-4o vision -> 3 advice bullet points
+           reports validation accuracy, saves cropscan.pt + labels.txt
+classify.py  photo -> fine-tuned ViT -> disease label (GPU)
+advise.py    photo -> classify.py label -> GPT-4o vision -> 3 advice bullet points
 ```
 
 ## Claims

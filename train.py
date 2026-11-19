@@ -27,3 +27,4 @@ with torch.no_grad():
         total += len(y)
 print(f"val accuracy {correct / total:.3f}")
 torch.save(model.state_dict(), "cropscan.pt")
+open("labels.txt", "w").write("\n".join(data.classes))
